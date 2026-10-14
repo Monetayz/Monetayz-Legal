@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monetayz — Legal</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for the Monetayz personal finance app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/folder.css">
+  <link rel="icon" href="./assets/Monetayz.ico">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .cover.cover--home {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .home-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 40px 24px;
+    }
+
+    .home-mark {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(232, 234, 242, 0.65);
+      letter-spacing: 0.01em;
+      margin: 0 0 28px;
+    }
+
+    .home-inner h1 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.15;
+      color: var(--navy-ink);
+      margin: 0 0 16px;
+    }
+
+    .home-inner p.intro {
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(232, 234, 242, 0.75);
+      max-width: 46ch;
+      margin: 0 0 24px;
+    }
+
+    .folder-host {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 8px 0 0;
+    }
+
+    .folder-hint {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(232, 234, 242, 0.45);
+      text-align: center;
+      margin: 20px 0 0;
+    }
+
+    /* no-JS fallback: the original ledger list */
+    .ledger {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(232, 234, 242, 0.18);
+    }
+
+    .ledger li {
+      border-bottom: 1px solid rgba(232, 234, 242, 0.18);
+    }
+
+    .ledger a {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 20px 2px;
+      text-decoration: none;
+      color: var(--navy-ink);
+    }
+
+    .ledger a:hover .ledger-title {
+      color: var(--seal);
+    }
+
+    .ledger-num {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: rgba(232, 234, 242, 0.5);
+      flex-shrink: 0;
+    }
+
+    .ledger-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ledger-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      display: block;
+      transition: color 0.15s ease;
+    }
+
+    .ledger-sub {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      color: rgba(232, 234, 242, 0.55);
+      margin-top: 3px;
+    }
+
+    .home-foot {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: rgba(232, 234, 242, 0.45);
+      margin-top: 36px;
+    }
+
+    .home-foot a {
+      color: rgba(232, 234, 242, 0.6);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+
+      .home-mark,
+      .home-inner h1,
+      .home-inner p.intro {
+        animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      .home-mark {
+        animation-delay: 0.02s;
+      }
+
+      .home-inner h1 {
+        animation-delay: 0.08s;
+      }
+
+      .home-inner p.intro {
+        animation-delay: 0.16s;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="cover cover--home">
+    <div class="home-inner">
+      <p class="home-mark">Monetayz</p>
+      <p class="intro">Two documents, kept current, covering how Monetayz handles your account and your financial records.</p>
+
+      <div id="legal-folder" class="folder-host"></div>
+      <p class="folder-hint" id="folder-hint" hidden>Hover to lean · Click to open</p>
+
+      <noscript>
+        <ol class="ledger">
+          <li>
+            <a href="./privacy.html">
+              <span class="ledger-num">01</span>
+              <span class="ledger-body">
+                <span class="ledger-title">Privacy Policy</span>
+                <span class="ledger-sub">How we collect, use, and protect your data</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="./terms.html">
+              <span class="ledger-num">02</span>
+              <span class="ledger-body">
+                <span class="ledger-title">Terms of Service</span>
+                <span class="ledger-sub">The rules for using Monetayz</span>
+              </span>
+            </a>
+          </li>
+        </ol>
+      </noscript>
+
+      <p class="home-foot">Questions? <a href="mailto:alperenyanik@hotmail.com">alperenyanik@hotmail.com</a></p>
+    </div>
+  </main>
+
+  <script src="./js/folder.js"></script>
+  <script>
+    GlassFolder.mount(document.getElementById('legal-folder'), {
+      label: 'Legal',
+      meta: '2 documents',
+      tone: 'dark',
+      art: 'ledger',
+      seed: 7,
+      width: 360,
+      files: [
+        { name: 'Privacy Policy', meta: '01 · Data', href: './privacy.html', art: 'brass' },
+        { name: 'Terms of Service', meta: '02 · Rules', href: './terms.html' }
+      ]
+    });
+    document.getElementById('folder-hint').hidden = false;
+  </script>
+</body>
+
+</html>
